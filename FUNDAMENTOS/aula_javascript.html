@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aula.javascript</title>
+</head>
+<body>
+	<script>
+		const notas = [8.9, 7, 6, 10]
+		for (let i=0; i<notas.length; i++){
+			console.log(`nota-${i+1} = ${notas[i]}`)
+		}
+		//if_else_if 
+		//O this é global quando estamos dentro de uma função...
+		//O this é global quando não estamos dentro de uma função...
+
+		Number.prototype.entre = function(inicio, fim){
+			return this >= inicio && this <= fim;
+		}
+		const imprir_resultado = function (nota){
+			if(nota.entre(9,10)){
+				console.log("conceito A");
+			}
+			else if(nota.entre(7, 8.9)){
+				console.log("conceito B");
+			} 
+			else if(nota.entre(5, 6.9)){
+				console.log("conceito C");
+			}
+			else if(nota.entre(0, 4.9)){
+				console.log("conceito D");
+			}
+			else{
+				console.log("Nota Invalida")
+			}
+		}
+		imprir_resultado(0);
+
+		//Switch
+
+		const imprir_resultado = function(nota){
+			switch (Math.floor.(nota)){
+				case 10: case 9:
+					console.log("conceito A");
+					break;
+				case 8: case 7:
+					console.log("conceito A");
+					break;
+				case 6: case 5: case 4:
+					console.log("conceito A");
+					break;
+				default:
+					console.log("nota Invalida");
+				
+			}
+		}
+		imprir_resultado(10);
+
+		</script>
+
+</body>
+</html>
