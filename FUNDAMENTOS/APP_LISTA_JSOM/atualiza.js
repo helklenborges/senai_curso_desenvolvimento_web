@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.get( "http://localhost:3003/", function(data) {
+    $.get( "http://localhost:3000/", function(data) {
    
     for(let i=0; i<data.length; i++)
     {
