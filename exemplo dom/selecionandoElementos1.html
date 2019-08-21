@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+
+    <div id="primeiro" onclick="exemplo2()">#primeiro</div>
+
+    <div id="segundo" onclick="exemplo3()" >Segundo</div>
+
+    <div id="terceiro" onclick="exemplo4()" >.terceiro .ultimo</div>
+
+    <button id="bt_um" onclick="exemplo1()">
+        destacar
+    </button>
+
+
+    <script>
+        //  exemplo recuperando selecionado elementos atraves do ById e atribuindo um
+        // const pri = document.getElementById("segundo")
+        //    pri.classList.add("destaque")
+        //    document.getElementById("primeiro").classList.add("destaque")
+        //    pri.innerHTML = "mudança"
+        //    pri.innerText  = "outra mudança"
+
+        // Metodo 1: utilizando for para percorrer um Array
+        //const divs = document.getElementsByTagName("div")
+        //const lista = Array.from(document.getElementsByTagName("div"))
+        //const lista2 = [...document.getElementsByTagName("div")]
+        // for(let i =0; i < divs.length; i++){
+        //  lista[i].classList.add("destaque")
+        // }
+        //lista[2].classList.remove("destaque")
+        //lista2.forEach(e => e.classList.add("destaque"))
+        //lista2.forEach(e => e.classList.remove("destaque"))
+
+        
+        function exemplo1() {
+            const lista2 = [...document.getElementsByTagName("div")]
+            const bt = document.getElementById("bt_um")
+            if (bt.innerText == "destacar") {
+
+                lista2.forEach(e => e.classList.add("destaque"))
+                bt.innerText = "Remover Destaque"
+
+            }
+            else {
+
+                lista2.forEach(e => e.classList.remove("destaque"))
+                bt.innerText = "destacar"
+            }
+        }
+        
+
+        function exemplo2() {
+            document.getElementById("primeiro").classList.toggle("destaque")
+        }
+        const exemplo3 = () => document.getElementById("segundo").classList.toggle("destaque")
+        const exemplo4 = () => document.getElementById("terceiro").classList.toggle("destaque")
+
+    </script>
+
+</body>
+
+</html>
