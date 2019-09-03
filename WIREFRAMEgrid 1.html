@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WIREFRAME 2</title>
+   
+    <style>
+        /* ... */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            grid-area: HEADER;
+            border: solid 1px red; 
+        }
+        main{
+            grid-area: BODY;
+            border: solid 1px blue; 
+        }
+        footer{
+            grid-area: FOOTER;
+            border: solid 1px rebeccapurple;
+        }
+        body{
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-areas: 
+                                'HEADER'
+                                'BODY'
+                                'FOOTER'
+        }
+
+    </style>
+</head>
+
+<body>
+    <main class="tag">BODY</main>
+    <header class="tag">HEADER</header>
+    <footer class="tag">FOOTER</footer>
+
+   
+</body>
+
+</html>
